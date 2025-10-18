@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tunog Pinoy - Instruments</title>
+    
+    <link rel="stylesheet" href="css/design.css"> 
+    
+    <style>
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100; 
+            background-color: #e6e0d3; 
+            opacity: 1; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px; 
+        }
+        
+        body {
+            padding-top: 80px; 
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+
+        .main-content {
+            max-width: 1300px; 
+            margin: 0 auto; 
+            padding: 20px; 
+        }
+        
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around; 
+            padding: 20px 0;
+            margin-bottom: 40px;
+        }
+
+        .product-item {
+            flex: 0 0 calc(33.333% - 20px); 
+            max-width: calc(33.333% - 20px);
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        
+        @media (max-width: 1024px) {
+            .product-item {
+                flex: 0 0 calc(50% - 15px);
+                max-width: calc(50% - 15px);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: row;
+                align-items: flex-start; 
+                padding: 10px 20px;
+            }
+            
+            .logo-container {
+                order: 2; 
+                text-align: right; 
+            }
+            
+            .nav-links {
+                order: 1; 
+                flex-direction: column; 
+                gap: 5px;
+                align-items: flex-start; 
+            }
+            
+            .nav-links a {
+                padding: 5px 0;
+                width: auto; 
+                text-align: left; 
+            }
+            
+            .product-item {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            .product-image-container {
+                height: 500px;
+            }
+        }
+        
+        .product-image-container {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            width: 420px; 
+            height: 730px; 
+            
+            margin: 0 auto 15px; 
+            border-radius: 8px;
+        }
+
+        .product-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: filter 0.3s ease;
+        }
+
+        .product-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.75); 
+            color: white;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center; 
+            
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .product-overlay h3 {
+            margin-bottom: 10px;
+            font-size: 18px; 
+            font-weight: bold;
+        }
+
+        .product-overlay p {
+            margin: 5px 0;
+            line-height: 1.4;
+            font-size: 14px;
+        }
+
+        .product-image-container:hover .product-overlay {
+            opacity: 1;
+        }
+
+        .product-image-container:hover .product-image {
+            filter: blur(2px);
+        }
+        
+        .product-caption {
+            display: none; 
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo-container">
+            <img src="placeholder-logo.png" alt="logo" id="logo">
+        </div>
+
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="instruments.html"><strong>Instruments</strong></a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contactus.html">Contact Us</a>
+        </div>
+    </header>
+
+    <main class="main-content">
+
+        <section class="instrument-category">
+            <h2 class="category-title">Entry Level Electric Guitars</h2>
+            <div class="product-grid">
+                
+                <div class="product-item">
+                    <div class="product-image-container">
+                        <img src="placeholder-rj-basic.png" alt="RJ Basic Electrics Skycaster" class="product-image">
+                        <div class="product-overlay">
+                            <h3>RJ Basic Electrics Skycaster</h3>
+                            <p>Body: Basswood</p>
+                            <p>Pickups: S-S-S</p>
+                            <p>Price: ₱5,799.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <div class="product-image-container">
+                        <img src="placeholder-clifton-pioneer.png" alt="Clifton Pioneer Stratocaster" class="product-image">
+                        <div class="product-overlay">
+                            <h3>Clifton Pioneer Stratocaster</h3>
+                            <p>Body: Poplar</p>
+                            <p>Pickups: S-S-S (Noiseless)</p>
+                            <p>Price: ₱4,990.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <div class="product-image-container">
+                        <img src="placeholder-jcraft-hss.png" alt="JCraft S-1H HSS Stratocaster" class="product-image">
+                        <div class="product-overlay">
+                            <h3>JCraft S-1H HSS Stratocaster</h3>
+                            <p>Body: Mahogany</p>
+                            <p>Pickups: H-S-S</p>
+                            <p>Price: ₱4,900.00</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="instrument-category">
+            <h2 class="category-title">Mid Range Electric Guitars</h2>
+            <div class="product-grid">
+                
+                <div class="product-item">
+                    <div class="product-image-container">
+                        <img src="placeholder-thomson-tl1.png" alt="Thomson TL1 Telecaster" class="product-image">
+                        <div class="product-overlay">
+                            <h3>Thomson TL1 Telecaster</h3>
+                            <p>Body: Ash</p>
+                            <p>Pickups: T-Style S-S</p>
+                            <p>Price: ₱7,000.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <div class="product-image-container">
+                        <img src="placeholder-clifton-cgt.png" alt="Clifton CGT Luna Model" class="product-image">
+                        <div class="product-overlay">
+                            <h3>Clifton CGT Luna Model</h3>
+                            <p>Body: Mahogany</p>
+                            <p>Pickups: H-H</p>
+                            <p>Price: ₱7,950.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <div class="product-image-container">
+                        <img src="placeholder-jcraft-jzx1.png" alt="JCraft X Series JZX-1 Jazzcaster" class="product-image">
+                        <div class="product-overlay">
+                            <h3>JCraft X Series JZX-1 Jazzcaster</h3>
+                            <p>Body: Basswood</p>
+                            <p>Pickups: P90-H</p>
+                            <p>Price: ₱7,500.00</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="instrument-category">
+            <h2 class="category-title">Enthusiast Electric Guitar:</h2>
+            <div class="product-grid">
+                
+                <div class="product-item">
+                    <div class="product-image-container">
+                        <img src="placeholder-rj-vibecaster-pro.png" alt="RJ Vibecaster Professional Edition" class="product-image">
+                        <div class="product-overlay">
+                            <h3>RJ Vibecaster Professional Edition</h3>
+                            <p>Body: Alder</p>
+                            <p>Pickups: S-S-S</p>
+                            <p>Price: ₱16,099.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <div class="product-image-container">
+                        <img src="placeholder-jcraft-ar2.png" alt="JCraft AR-2 2024 JM Semi-Hollow" class="product-image">
+                        <div class="product-overlay">
+                            <h3>JCraft AR-2 2024 JM Semi-Hollow</h3>
+                            <p>Body: Maple/Mahogany</p>
+                            <p>Pickups: P90-P90</p>
+                            <p>Price: ₱12,490.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <div class="product-image-container">
+                        <img src="placeholder-rj-supervintage.png" alt="RJ Supervintage 5-in-5 Guitar" class="product-image">
+                        <div class="product-overlay">
+                            <h3>RJ Supervintage 5-in-5 Guitar</h3>
+                            <p>Body: Mahogany</p>
+                            <p>Pickups: H-H</p>
+                            <p>Price: ₱64,599.00</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        Created by Paolo Villanueva est. 2025
+    </footer>
+
+</body>
+</html> 

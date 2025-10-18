@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tunog Pinoy - Home</title>
+    <link rel="stylesheet" href="css/design.css">
+
+    <style>
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100; 
+            background-color: #e6e0d3; 
+            opacity: 1; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px; 
+        }
+        
+        body {
+            padding-top: 80px; 
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+
+        main {
+            max-width: 1400px; 
+            margin: 0 auto; 
+            padding: 20px; 
+        }
+        .product-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px; 
+            padding: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .product-card {
+            flex: 0 0 calc(33.333% - 20px); 
+            text-align: center;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+            .product-card {
+                flex: 0 0 calc(50% - 15px);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header {
+                flex-direction: row;
+                align-items: flex-start;
+                padding: 10px 20px;
+            }
+            
+            .logo-container {
+                order: 2; 
+                text-align: right; 
+            }
+            
+            .nav-links {
+                order: 1; 
+                flex-direction: column; 
+                gap: 5px;
+                align-items: flex-start; 
+            }
+            
+            .nav-links a {
+                padding: 5px 0;
+                width: auto; 
+                text-align: left; 
+            }
+            
+            .product-card {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            .product-image-box {
+                height: 300px;
+            }
+            .product-description {
+                font-size: 0.9em;
+            }
+        }
+
+        .product-image-box {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            width: auto; 
+            height: 400px; 
+            
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        .product-image {
+            display: block;
+            max-width: 100%; 
+            height: auto; 
+            transition: filter 0.3s ease;
+        }
+
+        .product-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.75);
+            color: white;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .product-overlay h3 {
+            margin-bottom: 10px;
+            font-size: 18px; 
+            font-weight: bold;
+        }
+
+        .product-overlay p {
+            margin: 5px 0;
+            line-height: 1.4;
+            font-size: 14px;
+        }
+
+        .product-image-box:hover .product-overlay {
+            opacity: 1;
+        }
+
+        .product-image-box:hover .product-image {
+            filter: blur(2px);
+        }
+        
+        .img-vibecaster, .img-telecaster, .img-jazzbass {
+             object-fit: contain; 
+             height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo-container">
+            <img src="placeholder-logo.png" alt="logo" id="logo">
+        </div>
+        <div class="nav-links">
+            <a href="#"><strong>Home</strong></a>
+            <a href="instruments.html">Instruments</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contactus.html">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="discovery-title-section">
+            <h1 class="discovery-title">Today's New Discoveries</h1>
+        </section>
+
+        <section class="product-container">
+            <div class="product-card">
+                <div class="product-image-box">
+                    <img src="placeholder-vibecaster.png" alt="RJ Vibecaster Professional" class="product-image img-vibecaster">
+                    <div class="product-overlay">
+                        <h3>RJ Vibecaster Professional (Stone Blue)</h3>
+                        <p>Body: Alder</p>
+                        <p>Pickups: S-S-S</p>
+                        <p>Price: ₱16,099.00</p>
+                    </div>
+                </div>
+                <h2 class="product-name">RJ Vibecaster Professional (Stone Blue)</h2>
+                <p class="product-description">
+                    The RJ Vibecaster Professional offers you more than an ordinary Stratocaster. It delivers the signature tone, feel, and appearance of John Mayer's PRS Silver Sky. This guitar is perfect for the enthusiast and the tone explorers alike.
+                </p>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-box">
+                    <img src="placeholder-telecaster.png" alt="Clifton Vintage Custom Telecaster" class="product-image img-telecaster">
+                    <div class="product-overlay">
+                        <h3>Clifton Vintage Custom Telecaster SS (Surf Green)</h3>
+                        <p>Body: Poplar</p>
+                        <p>Pickups: S-S</p>
+                        <p>Price: ₱4,990.00</p>
+                    </div>
+                </div>
+                <h2 class="product-name">Clifton Vintage Custom Telecaster SS (Surf Green)</h2>
+                <p class="product-description">
+                    The Clifton Vintage Custom Telecaster featuring two single-coil pickups, is a highly versatile guitar with a tone that can match country, rock, jazz, and even metal. An excellent choice for undecided guitar players looking to transition to electric.
+                </p>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-box">
+                    <img src="placeholder-jazzbass.png" alt="Clifton 5 String Vintage Custom Jazz Bass" class="product-image img-jazzbass">
+                    <div class="product-overlay">
+                        <h3>Clifton 5 String Vintage Custom Jazz Bass</h3>
+                        <p>Body: Ash</p>
+                        <p>Pickups: J-Style (5-String)</p>
+                        <p>Price: ₱8,500.00</p>
+                    </div>
+                </div>
+                <h2 class="product-name">Clifton 5 String Vintage Custom Jazz Bass</h2>
+                <p class="product-description">
+                    The Clifton 5-String Vintage Custom Jazz Bass provides the versatility of sleek J-style pickups plus an extra string for lower notes, ideal for heavier styles. Recommended for new bassists aiming to reach a higher skill level.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        Created by Paolo Villanueva est. 2025
+    </footer>
+
+</body>
+</html>

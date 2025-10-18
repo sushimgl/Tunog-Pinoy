@@ -1,0 +1,153 @@
+/* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6e0d3; /* Light beige background */
+            color: #333;
+        }
+
+        /* Header and Navigation */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: linear-gradient(to right, #e6e0d3 50%, rgba(230, 224, 211, 0) 100%);
+            border-bottom: 1px solid #c9c3b4;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .guitar-icon {
+            /* Placeholder for the guitar icon */
+            font-size: 30px;
+            margin-right: 10px;
+            color: #333;
+        }
+
+        .site-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            margin-left: 40px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero/Title Section */
+        .discovery-title-section {
+            text-align: center;
+            margin: 50px 0 30px;
+        }
+
+        .discovery-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Product Cards Section */
+        .product-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px; /* Space between cards */
+            padding: 20px 50px 80px;
+        }
+
+        .product-card {
+            background-color: #f7f4ed; /* Card background color */
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px; /* Fixed width for each card */
+            box-sizing: border-box;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid #dcd6c8;
+        }
+
+        .product-image-box {
+            background-color: #f7f4ed; /* Image box background is the same as card background */
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            padding: 20px;
+            border: 1px solid #dcd6c8;
+            height: 400px; /* Fixed height for image area to match the visual */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+            /* The images in the original have a slight border or shadow, which is complex to recreate perfectly with just CSS */
+        }
+
+        .product-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+            text-align: justify;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+            color: #777;
+            background-color: #e6e0d3; /* Same as body */
+            border-top: 1px solid #c9c3b4;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Specific adjustments for image aspect ratio approximation */
+        .img-vibecaster {
+            height: 90%;
+            object-fit: contain;
+        }
+        .img-telecaster {
+            height: 65%;
+            object-fit: contain;
+        }
+        .img-jazzbass {
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .email-link {
+            text-decoration: none;
+            color: inherit; 
+            cursor: default; 
+        }
+
+        .email-link:hover,
+        .email-link:focus {
+            text-decoration: underline;
+            color: #007bff;
+        }
