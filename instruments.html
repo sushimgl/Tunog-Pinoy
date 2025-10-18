@@ -109,59 +109,63 @@
         }
 
         @media (max-width: 600px) {
-            /* Page adjustments */
-            #entry {
-                padding-top: 25px;
-            }
+    /* Page adjustments */
+    #entry {
+        padding-top: 25px;
+    }
 
-            .product-item {
-                flex: 0 0 auto;
-                width: 300px;
-            }
+    .product-item {
+        flex: 0 0 auto;
+        width: 300px;
+        margin-right: 15px; /* 👈 adds horizontal space between cards */
+    }
 
-            .product-image-container {
-                width: 320px;
-                height: 500px;
-            }
+    .product-image-container {
+        width: 320px;
+        height: 500px;
+    }
 
-            /* --- Horizontal scroll behavior --- */
-            .instrument-category {
-                overflow-x: auto;
-                overflow-y: hidden;
-                white-space: nowrap;
-                -webkit-overflow-scrolling: touch;
-                scroll-snap-type: x mandatory;
-                margin-bottom: 40px;
-                padding-bottom: 20px;
-            }
+    /* --- Horizontal scroll behavior --- */
+    .instrument-category {
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        margin-bottom: 40px;
+        padding: 10px 10px 20px;
+    }
 
-            .instrument-category .product-grid {
-                display: inline-flex;
-                flex-wrap: nowrap;
-                gap: 15px;
-                justify-content: flex-start;
-                padding: 10px;
-                min-width: 100%;
-            }
+    .instrument-category .product-grid {
+        display: inline-flex;
+        flex-wrap: nowrap;
+        gap:70px; /* 👈 secondary safety gap */
+        justify-content: flex-start;
+        padding: 10px;
+        min-width: 100%;
+    }
 
-            /* Keep section titles fixed */
-            .category-title {
-                position: sticky;
-                text-align: left;
-                font-size: 22px;
-                font-weight: bold;
-                margin-bottom: 10px;
-            }
+    /* Keep section titles fixed */
+    .category-title {
+        position: sticky;
+        text-align: left;
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        background-color: #E6D1B3; /* prevent overlap blur */
+        z-index: 5;
+    }
 
-            /* Hide scrollbars for a cleaner look */
-            .instrument-category::-webkit-scrollbar {
-                display: none;
-            }
-            .instrument-category {
-                -ms-overflow-style: none;
-                scrollbar-width: none;
-            }
-        }
+    /* Hide scrollbars for a cleaner look */
+    .instrument-category::-webkit-scrollbar {
+        display: none;
+    }
+    .instrument-category {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
+
     </style>
 </head>
 
@@ -169,7 +173,9 @@
 
     <header class="header">
         <div class="logo-container">
-            <img src="placeholder-logo.png" alt="logo" id="logo">
+            <a href="home.html">
+            <img src="images/logo.png" alt="logo" id="logo">
+            </a>
         </div>
 
         <div class="nav-links">
@@ -188,7 +194,7 @@
                 
                 <div class="product-item">
                     <div class="product-image-container">
-                        <img src="placeholder-rj-basic.png" alt="RJ Basic Electrics Skycaster" class="product-image">
+                        <img src="images/skycaster.png" alt="RJ Basic Electrics Skycaster" class="product-image">
                         <div class="product-overlay">
                             <h3>RJ Basic Electrics Skycaster</h3>
                             <p>Body: Basswood</p>
@@ -200,7 +206,7 @@
 
                 <div class="product-item">
                     <div class="product-image-container">
-                        <img src="placeholder-clifton-pioneer.png" alt="Clifton Pioneer Stratocaster" class="product-image">
+                        <img src="images/pioneer.png" alt="Clifton Pioneer Stratocaster" class="product-image">
                         <div class="product-overlay">
                             <h3>Clifton Pioneer Stratocaster</h3>
                             <p>Body: Poplar</p>
@@ -212,7 +218,7 @@
 
                 <div class="product-item">
                     <div class="product-image-container">
-                        <img src="placeholder-jcraft-hss.png" alt="JCraft S-1H HSS Stratocaster" class="product-image">
+                        <img src="images/hss.png" alt="JCraft S-1H HSS Stratocaster" class="product-image">
                         <div class="product-overlay">
                             <h3>JCraft S-1H HSS Stratocaster</h3>
                             <p>Body: Mahogany</p>
@@ -231,7 +237,7 @@
                 
                 <div class="product-item">
                     <div class="product-image-container">
-                        <img src="placeholder-thomson-tl1.png" alt="Thomson TL1 Telecaster" class="product-image">
+                        <img src="images/tl1.png" alt="Thomson TL1 Telecaster" class="product-image">
                         <div class="product-overlay">
                             <h3>Thomson TL1 Telecaster</h3>
                             <p>Body: Ash</p>
@@ -243,7 +249,7 @@
 
                 <div class="product-item">
                     <div class="product-image-container">
-                        <img src="placeholder-clifton-cgt.png" alt="Clifton CGT Luna Model" class="product-image">
+                        <img src="images/cgt.png" alt="Clifton CGT Luna Model" class="product-image">
                         <div class="product-overlay">
                             <h3>Clifton CGT Luna Model</h3>
                             <p>Body: Mahogany</p>
@@ -255,7 +261,7 @@
 
                 <div class="product-item">
                     <div class="product-image-container">
-                        <img src="placeholder-jcraft-jzx1.png" alt="JCraft X Series JZX-1 Jazzcaster" class="product-image">
+                        <img src="images/jazzcaster.png" alt="JCraft X Series JZX-1 Jazzcaster" class="product-image">
                         <div class="product-overlay">
                             <h3>JCraft X Series JZX-1 Jazzcaster</h3>
                             <p>Body: Basswood</p>
@@ -274,7 +280,7 @@
                 
                 <div class="product-item">
                     <div class="product-image-container">
-                        <img src="placeholder-rj-vibecaster-pro.png" alt="RJ Vibecaster Professional Edition" class="product-image">
+                        <img src="images/professional.png" alt="RJ Vibecaster Professional Edition" class="product-image">
                         <div class="product-overlay">
                             <h3>RJ Vibecaster Professional Edition</h3>
                             <p>Body: Alder</p>
@@ -286,7 +292,7 @@
 
                 <div class="product-item">
                     <div class="product-image-container">
-                        <img src="placeholder-jcraft-ar2.png" alt="JCraft AR-2 2024 JM Semi-Hollow" class="product-image">
+                        <img src="images/semi.png" alt="JCraft AR-2 2024 JM Semi-Hollow" class="product-image">
                         <div class="product-overlay">
                             <h3>JCraft AR-2 2024 JM Semi-Hollow</h3>
                             <p>Body: Maple/Mahogany</p>
@@ -298,7 +304,7 @@
 
                 <div class="product-item">
                     <div class="product-image-container">
-                        <img src="placeholder-rj-supervintage.png" alt="RJ Supervintage 5-in-5 Guitar" class="product-image">
+                        <img src="images/5in1.png" alt="RJ Supervintage 5-in-5 Guitar" class="product-image">
                         <div class="product-overlay">
                             <h3>RJ Supervintage 5-in-5 Guitar</h3>
                             <p>Body: Mahogany</p>
