@@ -8,31 +8,10 @@
     <link rel="stylesheet" href="css/design.css">
     
     <style>
-        /* --- GLOBAL HEADER STYLING (Applies to all screens) --- */
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100; 
-            background-color: #e6e0d3; 
-            opacity: 1; 
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-            
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px; 
-        }
-        
         body {
             padding-top: 80px; 
-        }
-        
-        .nav-links {
-            display: flex;
-            justify-content: flex-end;
-            gap: 20px;
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
 
         /* --- Main Content Layout --- */
@@ -55,7 +34,7 @@
             padding-top: 20px;
         }
 
-        .section-title{
+        .section-title {
             font-size: 24px;
             font-weight: bold;
         }
@@ -74,38 +53,34 @@
         .local-highlight {
             font-style: italic;
         }
-        
-        /* --- TABLET/MOBILE VIEW --- */
+
+        /* --- TABLET VIEW (landscape) --- */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .main-content {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+                padding: 0 30px;
+            }
+
+            body {
+                padding-top: 100px;
+            }
+        }
+
+        /* --- MOBILE VIEW (portrait) --- */
         @media (max-width: 768px) {
             .main-content {
                 grid-template-columns: 1fr;
                 gap: 20px;
                 padding: 0 20px;
             }
+
             .suggestion-box {
                 text-align: left; 
             }
-            
-            /* Mobile Nav Left, Logo Right */
-            .header {
-                flex-direction: row;
-                align-items: flex-start;
-                padding: 10px 20px;
-            }
-            .logo-container {
-                order: 2; 
-                text-align: right; 
-            }
-            .nav-links {
-                order: 1; 
-                flex-direction: column; 
-                gap: 5px;
-                align-items: flex-start; 
-            }
-            .nav-links a {
-                padding: 5px 0;
-                width: auto; 
-                text-align: left; 
+
+            body {
+                padding-top: 140px; /* more space for fixed header + nav */
             }
         }
     </style>
@@ -117,12 +92,14 @@
             <img src="placeholder-logo.png" alt="logo" id="logo">
         </div>
 
-        <div class="nav-links">
-            <a href="home.html">Home</a>
-            <a href="instruments.html">Instruments</a>
-            <a href="aboutus.html">About Us</a>
-            <a href="#"><strong>Contact Us</strong></a>
-        </div>
+        <section class="navbar">
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="instruments.html">Instruments</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="#"><strong>Contact Us</strong></a>
+            </div>
+        </section>
     </header>
 
     <main class="main-content">

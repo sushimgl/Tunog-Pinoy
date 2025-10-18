@@ -5,180 +5,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tunog Pinoy - About Us</title>
     
-    <link rel="stylesheet" href="css/design.css"> 
-    
+    <!-- Global site styles -->
+    <link rel="stylesheet" href="css/design.css">
+
+    <!-- Page-specific layout styles only -->
     <style>
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100; 
-            background-color: #e6e0d3; 
-            opacity: 1; 
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-            
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px; 
-        }
-        
+        /* =========================================================
+           PAGE LAYOUT: ABOUT US
+           ========================================================= */
+
         body {
-            padding-top: 80px; 
-        }
-        
-        .nav-links {
-            display: flex;
-            justify-content: flex-end;
-            gap: 20px;
+            padding-top: 100px; /* offset for fixed header */
+            margin-bottom: 100px; /* prevent footer overlap */
         }
 
         .main-content {
             display: grid;
-            grid-template-columns: 1fr 1fr; 
-            gap: 60px; 
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
             padding: 40px 60px;
+            box-sizing: border-box;
+        }
+
+        .qa-section,
+        .creator-history-section {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .qa-item {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
         .history-list {
-            font-size: 20px;
-            line-height: 1.5em;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
-        
+
+        /* Tablet layout */
         @media (max-width: 1024px) {
             .main-content {
-                grid-template-columns: 1fr; 
-                gap: 40px; 
-                padding: 40px 20px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .header {
-                flex-direction: row;
-                align-items: flex-start;
-                padding: 10px 20px;
-            }
-            
-            .logo-container {
-                order: 2; 
-                text-align: right; 
-            }
-            
-            .nav-links {
-                order: 1; 
-                flex-direction: column; 
-                gap: 5px;
-                align-items: flex-start; 
-            }
-            
-            .nav-links a {
-                padding: 5px 0;
-                width: auto; 
-                text-align: left; 
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 30px 25px;
             }
         }
 
+        /* Mobile layout */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 120px; /* extra offset for stacked header */
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+                padding: 20px;
+                gap: 25px;
+            }
+
+            .qa-section h3 {
+                margin-bottom: 0; /* smaller space below the question */
+            }
+
+            .qa-section p {
+                margin-top: 0; /* remove extra space above the answer */
+}
+
+        }
     </style>
 </head>
 <body>
 
+    <!-- ============================= HEADER ============================= -->
     <header class="header">
         <div class="logo-container">
             <img src="placeholder-logo.png" alt="logo" id="logo">
         </div>
-
-        <div class="nav-links">
+        <nav class="nav-links">
             <a href="home.html">Home</a>
             <a href="instruments.html">Instruments</a>
             <a href="#"><strong>About Us</strong></a>
             <a href="contactus.html">Contact Us</a>
-        </div>
+        </nav>
     </header>
 
+    <!-- ============================= MAIN CONTENT ============================= -->
     <main class="main-content">
 
         <section class="qa-section">
-            <h1>About the website</h1>
+            <h1>About the Website</h1>
+
             <div class="qa-item">
-                <h3 class="qa-question">What is this website for?</h3>
-                <p class="qa-answer">
-                    This website serves as a recommendation hub for Filipino-made guitars. While there is an abundance of local options, only a few brands and models deliver reliable quality and genuine value for money. This site highlights those select instruments.
-                </p>
+                <h3>What is this website for?</h3>
+                <p>This website serves as a recommendation hub for Filipino-made guitars. While there is an abundance of local options, only a few brands and models deliver reliable quality and genuine value for money. This site highlights those select instruments.</p>
             </div>
 
             <div class="qa-item">
-                <h3 class="qa-question">Can I purchase guitars directly from this website?</h3>
-                <p class="qa-answer">
-                    No. The website does not sell guitars or accessories. It is an independent recommendation platform with no affiliations or commercial ties with the brands mentioned.
-                </p>
+                <h3>Can I purchase guitars directly from this website?</h3>
+                <p>No. The website does not sell guitars or accessories. It is an independent recommendation platform with no affiliations or commercial ties with the brands mentioned.</p>
             </div>
 
             <div class="qa-item">
-                <h3 class="qa-question">How credible are the opinions on this website?</h3>
-                <p class="qa-answer">
-                    The insights provided are based on personal experience. The site's creator has been playing guitar since 2017, with several years of hands-on experience evaluating instruments.
-                </p>
+                <h3>How credible are the opinions on this website?</h3>
+                <p>The insights provided are based on personal experience. The site's creator has been playing guitar since 2017, with several years of hands-on experience evaluating instruments.</p>
             </div>
 
             <div class="qa-item">
-                <h3 class="qa-question">Are the reviews sponsored?</h3>
-                <p class="qa-answer">
-                    No. All recommendations are made independently. The website is not influenced by paid sponsorships, partnerships, or advertisements.
-                </p>
+                <h3>Are the reviews sponsored?</h3>
+                <p>No. All recommendations are made independently. The website is not influenced by paid sponsorships, partnerships, or advertisements.</p>
             </div>
 
             <div class="qa-item">
-                <h3 class="qa-question">What types of guitars are featured?</h3>
-                <p class="qa-answer">
-                    The focus is on Filipino-made guitars and models available locally. The goal is to highlight instruments that balance affordability with reliable performance.
-                </p>
+                <h3>What types of guitars are featured?</h3>
+                <p>The focus is on Filipino-made guitars and models available locally. The goal is to highlight instruments that balance affordability with reliable performance.</p>
             </div>
-            
+
             <div class="qa-item">
-                <h3 class="qa-question">Can readers suggest guitars or brands for review?</h3>
-                <p class="qa-answer">
-                    Yes. Suggestions are welcome and may be considered for future reviews, depending on availability and access.
-                </p>
+                <h3>Can readers suggest guitars or brands for review?</h3>
+                <p>Yes. Suggestions are welcome and may be considered for future reviews, depending on availability and access.</p>
             </div>
         </section>
 
         <section class="creator-history-section">
-            <h1 class="creator-history-title">About the Creator</h1>
+            <h1>About the Creator</h1>
             <ul class="history-list">
-                <li class="history-item">
-                    <strong>2017</strong> – The journey began with an acoustic guitar, where the creator first learned the fundamentals of playing and developed an appreciation for music. This year was dedicated to building a foundation of technique, rhythm, and passion.
-                </li>
-                <li class="history-item">
-                    <strong>2018</strong> – After gaining confidence, the creator purchased their first electric guitar. This milestone opened doors to a broader range of styles and genres, allowing experimentation with tones and techniques unique to the electric instrument.
-                </li>
-                <li class="history-item">
-                    <strong>2019</strong> – Live performance became an integral part of the creator's growth. Playing in shows provided valuable experience in front of audiences and helped hone stage presence and adaptability as a musician.
-                </li>
-                <li class="history-item">
-                    <strong>2020</strong> – A deep interest in blues music emerged. The creator explored its history, techniques, and emotional depth, adding expressive elements such as bending, vibrato, and improvisation into their playing.
-                </li>
-                <li class="history-item">
-                    <strong>2021</strong> – With an eagerness to grow further, the creator began exploring multiple guitars. This also included learning about how specific guitars are suited to particular styles, from rock and jazz to funk and beyond.
-                </li>
-                <li class="history-item">
-                    <strong>2022</strong> – Songwriting became a focus. The creator started composing original music, intertwining personal experiences and diverse influences into pieces that reflected individuality as an artist.
-                </li>
-                <li class="history-item">
-                    <strong>2023</strong> – Following the challenges of the pandemic, the creator returned to performing in shows. This re-entry into the live scene strengthened their connection with audiences and revitalized the excitement of playing on stage.
-                </li>
-                <li class="history-item">
-                    <strong>2024</strong> – Performance opportunities expanded further with participation in a Battle of the Bands competition. This tested both skill and creativity in a high-pressure environment, ultimately sharpening musicianship and confidence.
-                </li>
-                <li class="history-item">
-                    <strong>2025</strong> – By this year, the creator had performed with numerous guitars across different venues and settings. This extensive, first-hand experience contributed to a well-rounded knowledge of instruments, their strengths, and their suitability for various playing contexts.
-                </li>
+                <li><strong>2017</strong> – The journey began with an acoustic guitar, learning fundamentals and developing an appreciation for music.</li>
+                <li><strong>2018</strong> – Bought the first electric guitar, exploring new tones and playing styles.</li>
+                <li><strong>2019</strong> – Started performing live, improving stage presence and adaptability.</li>
+                <li><strong>2020</strong> – Developed a passion for blues, incorporating expressive bends, vibrato, and improvisation.</li>
+                <li><strong>2021</strong> – Began exploring multiple guitars suited to different genres and styles.</li>
+                <li><strong>2022</strong> – Focused on songwriting and crafting original pieces.</li>
+                <li><strong>2023</strong> – Returned to live performances post-pandemic, reconnecting with audiences.</li>
+                <li><strong>2024</strong> – Joined a Battle of the Bands, refining musicianship and creativity.</li>
+                <li><strong>2025</strong> – Gained extensive hands-on experience performing with diverse guitars across venues.</li>
             </ul>
         </section>
 
     </main>
 
+    <!-- ============================= FOOTER ============================= -->
     <footer class="footer">
         Created by Paolo Villanueva est. 2025
     </footer>
